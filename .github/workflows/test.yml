@@ -21,15 +21,6 @@ jobs:
     
     - name: Instrument code
       uses: AryazE/auto-dylin/instrument@main
-    
-    - name: Log 1
-      run: |
-        ls
-        cat test.py
-        cat analyses.txt
-        ls /tmp
-        echo ${{ env.DYNAPYT_SESSION_ID }}
-        echo ${{ env.DYNAPYT_COVERAGE }}
 
     - name: Run tests
       run: |
@@ -39,7 +30,7 @@ jobs:
       run: |
         ls
         cat test.py
-        ls /tmp
+        ls /tmp/dynapyt_*-${{ env.DYNAPYT_SESSION_ID }}
     
     - name: DyLin reports
       if: always()
