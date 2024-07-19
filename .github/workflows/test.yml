@@ -26,6 +26,7 @@ jobs:
       run: |
         ls
         cat test.py
+        cat analyses.txt
         ls /tmp
         echo ${{ env.DYNAPYT_SESSION_ID }}
         echo ${{ env.DYNAPYT_COVERAGE }}
